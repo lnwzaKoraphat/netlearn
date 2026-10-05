@@ -1,0 +1,59 @@
+:root { color-scheme: light; }
+html { scroll-behavior: smooth; }
+body { font-size: 16px; line-height: 1.75; }
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 100;
+  background: #0F2A4A; color: #fff; padding: 0.75rem 1.25rem; border-radius: 0 0 0.5rem 0;
+}
+.skip-link:focus { left: 0; }
+
+:focus-visible {
+  outline: 3px solid #E86A17;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.card {
+  background: #fff; border: 1px solid #dbe3ea; border-radius: 0.875rem;
+  box-shadow: 0 1px 2px rgba(15,42,74,.05);
+}
+.card-hover { transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+.card-hover:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,42,74,.10); border-color: #0E8C8C; }
+
+.prose-net p { margin-bottom: 0.85rem; }
+.prose-net ul { margin: 0 0 1rem 1.15rem; list-style: disc; }
+.prose-net li { margin-bottom: 0.35rem; }
+
+.table-net { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.table-net th, .table-net td { border: 1px solid #dbe3ea; padding: 0.5rem 0.65rem; text-align: left; }
+.table-net th { background: #E6EFF8; font-weight: 600; }
+.table-net tr:nth-child(even) td { background: #FAFBFC; }
+
+.hash-anchor { scroll-margin-top: 5rem; }
+
+.chip { display: inline-block; padding: 0.15rem 0.6rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; }
+.chip-ok { background: #E3F3F3; color: #0A6E6E; border: 1px solid #0E8C8C; }
+.chip-no { background: #FDEDE1; color: #a8480c; border: 1px solid #E86A17; }
+.chip-info { background: #E6EFF8; color: #14477f; border: 1px solid #1B5EA8; }
+
+.wire-pin { transition: all .12s ease; }
+.wire-pin.sel { stroke: #E86A17; stroke-width: 5; }
+.wire-slot.hl rect { stroke: #E86A17; stroke-width: 3; }
+
+.match-item {
+  background: #fff; border: 2px solid #dbe3ea; border-radius: 0.75rem; padding: 0.6rem 0.8rem;
+  cursor: pointer; text-align: center; font-weight: 600;
+}
+.match-item:hover:not(:disabled) { border-color: #0E8C8C; background: #E3F3F3; }
+.match-item.sel { border-color: #E86A17; background: #FDEDE1; }
+.match-item.matched { border-color: #0E8C8C; background: #E3F3F3; color: #0A6E6E; cursor: default; }
+.match-item.matched:focus-visible { outline-offset: 3px; }
+
+.lesson-body h3 { font-size: 1.15rem; font-weight: 700; color: #0F2A4A; margin: 1.5rem 0 0.5rem; }
+
+.hero-grid-bg {
+  background-image: linear-gradient(rgba(14,140,140,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14,140,140,.07) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
